@@ -4,7 +4,7 @@ from discord.ext import commands
 bot = commands.Bot("", self_bot=True)
 @bot.event
 async def on_ready():
-    print("gor self bot is ready for action if you know what i mean")
+    print("self bot is ready for action if you know what i mean")
 
 @bot.event
 async def on_message(message):
