@@ -1,0 +1,2 @@
+#!/bin/bash
+zathura ~/physics/hw/answer_to_ps_$1.pdf &
