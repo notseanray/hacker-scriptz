@@ -1,6 +1,8 @@
 #### scripts
 
 * autoclicker.py - power clicker
+* checkdisk.sh - check disks health
+* eth.sh - statically connect to internet
 * leavezoom.py - horrible script to kill all zoom pids
 * mkfile.py - generate text file for payload testing
 * selfbot.py - tiny discord self bot

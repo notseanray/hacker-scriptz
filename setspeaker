@@ -1,0 +1,8 @@
+#!/bin/bash
+chosen=$(pacmd list-sinks | grep 'index: ' | dmenu -g 1)
+IFS=' '
+read -a strarr <<< "$chosen"
+
+pacmd set-default-sink ${strarr[1]}
+
+notify-send "speaker changed to: ${strarr[1]}"

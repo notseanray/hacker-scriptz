@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ $1 -gt 0 ]]; then
+	pamixer --allow-boost -i $1
+else
+	pamixer --allow-boost -i 2
+fi
+
+notify-send "volume: $(pamixer --get-volume-human)"
