@@ -1,0 +1,9 @@
+#!/bin/bash
+touch video_list.txt
+for arg in "$@"
+do
+	echo "adding $arg"
+	echo "file '$arg'" >> video_list.txt
+done
+ffmpeg -f concat -safe 0 -i video_list.txt -c copy output.mp4
+rm video_list.txt

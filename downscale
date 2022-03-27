@@ -1,0 +1,2 @@
+#!/bin/mksh
+ffmpeg -i $1 -vf scale=$2x$3:flags=lanczos -c:v libx264 -preset slow -crf 21 output_compress.mp4
