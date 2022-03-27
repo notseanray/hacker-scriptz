@@ -1,0 +1,12 @@
+#!/bin/python3
+import os 
+
+for file in os.listdir("."):
+    if os.path.isdir(file):
+        continue
+    extension = os.path.splitext(file)[1][1:]
+    print(extension)
+    local = os.path.join("./", extension)
+    if not os.path.exists(local):
+        os.makedirs(local)
+    os.rename(file, os.path.join(local, os.path.basename(file)))
