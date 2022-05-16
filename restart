@@ -1,0 +1,4 @@
+#!/bin/bash
+killall $1
+$1 &
+#notify-send "attempted to restart $1"

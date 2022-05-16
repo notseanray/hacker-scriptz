@@ -1,0 +1,33 @@
+#!/bin/env sh
+
+# INIT
+touch /tmp/rbar
+kill -9 $(cat /tmp/rbar)
+echo "$$" > /tmp/rbar
+
+update_weather () { 
+	weather="$(curl -s "wttr.in?format=1"| sed -E "s/^(.).*\+/\1/")" 
+	#weather="$(curl -s "wttr.in?format="%t"")"
+}
+
+rbar () {
+	rstatus="$(rstatus)"
+}
+
+btc () {
+  btc="$(curl -s http://api.coindesk.com/v1/bpi/currentprice.json | jq -r .bpi.USD.rate)"
+}
+
+display () { 
+  #printf "%s\n" " $event [$weather] [$memory $cpu] [$bat] [$backlight] [$vol] $time "
+	xsetroot -name "₿ $btc | $weather | $rstatus"
+}
+while true
+do
+	sleep 2 & wait && { 
+		btc
+		update_weather
+		rbar
+		display
+	}
+done 

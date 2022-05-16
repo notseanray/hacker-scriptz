@@ -1,3 +1,4 @@
+#!/bin/sh
 xwallpaper --no-randr --focus /home/sean/.config/sean/walls/$1
 echo $1 > /home/sean/.config/scripts/curwall
-notify-send "wallpaper changed to $1."
+#notify-send "wallpaper changed to $1."

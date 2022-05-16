@@ -26,7 +26,6 @@ update_weather () {
 }
 
 update_vol () { 
-	vol="$([ "$(pamixer --get-mute)" = "false" ] && printf '' || printf '')$(pamixer --get-volume)%"
 	vol="$(pactl list sinks | grep '^[[:space:]]Volume:' | \
 	head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')"
 }
