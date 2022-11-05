@@ -2,7 +2,7 @@
 import os
 import sys
 
-mksh_shebang = "#!" + os.popen("whereis mksh").readline().split(" ")[1] + "\n"
+mksh_shebang = "#!" + os.popen("whereis zsh").readline().split(" ")[1] + "\n"
 
 print("found mksh at: " + mksh_shebang)
 
@@ -12,7 +12,7 @@ def replace_bash(file):
     file_contents = file_open.readlines()
     if len(file_contents) < 1:
         return
-    if file_contents[0] == "#!/bin/bash\n":
+    if file_contents[0] == "#!/bin/bash\n" or file_contents[0] == "#!/bin/mksh":
         file_contents[0] = mksh_shebang
         flag = False
     if flag:

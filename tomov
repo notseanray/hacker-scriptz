@@ -1,2 +1,2 @@
-#!/bin/mksh
-ffmpeg -i $1 -c:v dnxhd -vf "scale=1280:720,fps=30000/1001,format=yuv422p" -b:v 110M -c:a pcm_s16le output.mov
+#!/bin/zsh
+ffmpeg -i $1 -c:v dnxhd -vf "scale=1280:720,fps=30000/1001,format=yuv422p" -b:v 110M -c:a pcm_s16le $1.mov

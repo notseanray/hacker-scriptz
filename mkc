@@ -1,2 +1,2 @@
-#!/bin/mksh
+#!/bin/zsh
 mkdir $1 && cd $1

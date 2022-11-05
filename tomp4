@@ -1,2 +1,2 @@
-#!/bin/mksh
-ffmpeg -i $1 -c:v libx264 -c:a aac output.mp4
+#!/bin/zsh
+ffmpeg -i $1 -c:v libx264 -c:a aac $1-mp4.mp4

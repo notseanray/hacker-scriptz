@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 if [[ $(expr length "$1") = 0 ]]; then
 	interface="enp27s0"
 else

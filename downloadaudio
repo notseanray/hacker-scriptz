@@ -1,2 +1,2 @@
-#!/bin/mksh
+#!/bin/zsh
 youtube-dl -x --audio-format mp3 $1

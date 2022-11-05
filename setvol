@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 for SINK in `pacmd list-sinks | grep 'index:' | cut -b12-`
 do
     pacmd set-sink-volume $SINK "$(($1*655))"
-	notify-send "volume: $1%"
 done
+notify-send "volume: $1%"

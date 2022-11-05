@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 touch video_list.txt
 for arg in "$@"
 do

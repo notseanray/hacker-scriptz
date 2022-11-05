@@ -1,3 +1,3 @@
-#!/bin/mksh
+#!/bin/zsh
 name="${1%.*}_compressed.mp4"
 ffmpeg -i $1 -vf scale=$2x$3:flags=lanczos -c:v libx264 -preset slow -crf 21 $name

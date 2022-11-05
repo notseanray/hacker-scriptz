@@ -1,5 +1,4 @@
-#!/bin/mksh
-
+#!/bin/zsh
 dunstctl close-all
 
 update_vol () {
