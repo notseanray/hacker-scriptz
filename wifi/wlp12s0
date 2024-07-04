@@ -1,0 +1,9 @@
+wpa_supplicant -i wlp12s0 -c /etc/wpa_supplicant/wlp12s0 &
+echo "scan"
+echo "scan_results"
+echo "add_network"
+echo "set_network 0 ssd \"NAME\""
+echo "set_network 0 psk \"WIFI PASS\""
+echo "enable_network 0"
+echo "quit"
+wpa_cli -i wlp1s0
